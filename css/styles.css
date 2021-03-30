@@ -67,6 +67,7 @@ img {
 .social-icons-link:focus .icon {
   fill: #ffffff;
 }
+
 .social-icons .social-icons-item + .social-icons-item {
   margin-left: 10px;
 }
@@ -152,6 +153,7 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
 }
+
 .nav-contact-item {
   display: flex;
 }
@@ -240,7 +242,45 @@ img {
   text-transform: uppercase;
   margin-bottom: 30px;
 }
-
+.backdrop{
+  position: fixed;
+  top: 0;
+  right: 0;
+ width: 100%;
+ height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); 
+}
+.backdrop.is-hidden{
+opacity: 0;
+pointer-events: none;
+}
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  min-width: 528px ;
+  min-height: 581px;
+  background-color: #FFFFFF;
+}
+.modal-icon{
+ align-items: flex-end;
+  display: inline-block;
+  
+  width: 18px;
+  height: 18px;
+  right: 0;
+}
+.btn-closed{
+  
+ 
+  width: 30px;
+  height: 30px;
+ 
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(0, 0, 0, 0.1)
+}
 .hero-button:hover {
   color: var(--white-color);
   background-color: var(--blue-color);
@@ -332,6 +372,32 @@ img {
   flex-wrap: wrap;
   flex-basis: calc((100% - 90px) / 3);
   justify-content: space-evenly;
+}
+.product{
+  position: relative;
+}
+.product-text{
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  padding: 27px 83px;
+  opacity: 1;
+
+  font-family: Roboto;
+  font-style: normal;
+  
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  
+
+  color: #FFFFFF;
 }
 
 .service .service-item + .service-item {
@@ -736,5 +802,45 @@ footer .social-icons-link {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+.product-thumb{
+  position: relative;
+}
+.product-actions{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 100%;
+height: 100%;
+padding: 63px 24px;
+opacity: 0;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 28px;
+letter-spacing: 0.03em;
+color: #FFFFFF;
+
+}
+
+.galerie-item:hover .product-actions,
+.galerie-item:focus .product-actions{
+  opacity: 1;
+}
+.product-thumb::before{
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 100%;
+ background-color: rgba(33, 150, 243, 0.9);
+ position: absolute;
+ opacity: 0;
+}
+.galerie-item:hover .product-thumb::before{
+  opacity: 1;
+}
+
 
 

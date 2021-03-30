@@ -26,7 +26,7 @@
          
             <ul class="site-nav">
               <li class="site-nav-item">
-                <a href="./index.html" class="link">Студия</a>
+                <a href="./index.html" class="link ">Студия</a>
               </li>
               <li class="site-nav-item">
                 <a href="./portfolio.html" class="link">Портфолио</a>
@@ -62,8 +62,19 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Эффективные решения <br> для вашего бизнеса</h1>
-          <button class="hero-button" type="button">Заказать услугу</button>
+          <button class="hero-button" type="button" data-open-modal>Заказать услугу</button>
         </div>
+
+        <div class="backdrop is-hidden" data-backdrop> 
+          <div class="modal">
+            <button class="btn-closed" data-close-modal>
+              <svg class="modal-icon">
+                <use href="./images/icons.svg#close"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+       
       </section>
 
       <!--Преимущества-->
@@ -111,21 +122,30 @@
          <h2 class="section-title h2">Чем мы занимаемся</h2>
         <ul class="service">
           <li class="service-item">
+            <div class="product">
             <img src="./images/img2.jpg" alt="Набор текста" width="370" />
+            <p class="product-text">Десктопные приложения</p>
+            </div>
           </li>
           <li class="service-item">
+            <div class="product">
             <img
               src="./images/img3.jpg"
               alt="Создание макета страницы"
               width="370"
             />
+            <p class="product-text">Мобильные приложения</p>
+          </div>
           </li>
           <li class="service-item">
+            <div class="product">
             <img
               src="./images/img4.jpg"
               alt="Выбор цвета в оттенках"
               width="370"
             />
+              <p class="product-text">Дизайнерские решения</p>
+          </div>
           </li>
         </ul></div>
       </section>
@@ -415,5 +435,25 @@
         </div>
       </div>
     </footer>
+    <script>
+      const refs={
+        openModalBtn: document.querySelector("[data-open-modal]"),
+        closeModalBtn: document.querySelector("[data-close-modal]"),
+        backdrop: document.querySelector("[data-backdrop]"),
+      };
+      refs.openModalBtn.addEventListener("click", toggleModal);
+      refs.closeModalBtn.addEventListener("click", toggleModal);
+
+      refs.backdrop.addEventListener("click", logBackdropClick);
+
+      function toggleModal(){
+        refs.backdrop.classList.toggle("is-hidden");
+
+      }
+
+      function logBackdropClick(){
+        console.log("Это клик в бекдроп");
+      }
+    </script>
   </body>
 </html>
