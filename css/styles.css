@@ -62,7 +62,7 @@ img {
   align-items: center;
   background-color: #fff;
   fill: #757575;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icons-link:hover,
 .social-icons-link:focus {
@@ -80,6 +80,7 @@ img {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .visually-hidden {
@@ -195,12 +196,15 @@ img {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link:hover {
   color: var(--blue-color);
 }
-.site-nav .link {
+.nav-contact .link-phone,
+.nav-contact .link-mail{
   color: var(--primary-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link {
@@ -298,6 +302,8 @@ img {
   width: 18px;
   height: 18px;
   right: 0;
+  
+  padding-top: 6px;
 }
 .btn-closed {
   position: absolute;
@@ -329,16 +335,13 @@ img {
 
   left: 0;
   bottom: 0;
-  opacity: 0;
+  opacity: 1;
   background: rgba(33, 150, 243, 1);
 
   border-radius: 2px;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.link-header:hover::after,
-.link-header:focus::after {
-  opacity: 1;
-}
+
 
 .link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -376,9 +379,7 @@ img {
   font-size: 16px;
   line-height: 30px;
 
-  transition: background-color var(--animation-speed) var(--timing-function),
-    color var(--animation-speed) var(--timing-function),
-    box-shadow var(--animation-speed) var(--timing-function);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button {
   border-radius: 4px;
@@ -465,7 +466,7 @@ img {
   width: 100%;
   height: 70px;
   background-color: rgba(47, 48, 58, 0.8);
-  padding: 27px 83px;
+  padding-top: 27px;
   opacity: 1;
 
   font-family: Roboto;
@@ -577,10 +578,12 @@ img {
   justify-content: center;
   align-items: center;
   background-color: #fff;
+  transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-item {
   display: inline-flex;
   margin-top: 50px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-list .clients-item + .clients-item {
   margin-left: 30px;
@@ -589,10 +592,12 @@ img {
   width: 80px;
   height: 42px;
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
   fill: rgba(33, 150, 243, 1);
+  transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section .section-title.h3 {
@@ -652,9 +657,18 @@ img {
 
   color: #212121;
   background-color: #f5f4fa;
+  padding: 6px 22px;
+ 
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Portfolio CSS */
-
+.portfolio-button{
+ 
+  font-weight: 500;
+  
+}
 /* Service */
 .button-portfolio-item .button {
   margin-top: 0px;
@@ -686,6 +700,7 @@ footer {
   line-height: 1.15;
   color: #212121;
   padding: 10px 0 10px 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .page-footer {
   display: inline-flex;
@@ -713,6 +728,7 @@ footer {
   text-decoration: none;
   padding: 10px 0 10px 0;
   color: #757575;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-contact a {
@@ -720,6 +736,7 @@ footer {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-text {
   font-family: Roboto;
@@ -747,6 +764,7 @@ footer .social-icons-link {
 
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social {
   display: flex;
@@ -766,12 +784,11 @@ footer .social-icons-link {
 .address a {
   color: rgba(255, 255, 255, 0.6);
 }
-.link {
-  transition: var (--animation);
-}
+
 .address.link:hover,
 .address.link:focus {
   color: #2196f3;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address .street .link {
@@ -801,6 +818,9 @@ footer .social-icons-link {
   display: flex;
   background-color: #fff;
   margin-bottom: 50px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-portfolio .button-portfolio-item + .button-portfolio-item {
   margin-left: 8px;
@@ -815,19 +835,7 @@ footer .social-icons-link {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.button {
-  font-family: Roboto;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.6;
-  text-align: center;
-  letter-spacing: 0.03em;
-  border: none;
-  border-radius: 4px;
-  padding: 6px 22px;
-  color: #212121;
-  background-color: #f5f4fa;
-}
+
 
 /* Service */
 
@@ -867,10 +875,7 @@ footer .social-icons-link {
 
 /* Buttons class */
 
-.button-portfolio {
-  display: flex;
-  justify-content: center;
-}
+
 .galerie-item:hover,
 .galerie-item:focus {
   cursor: pointer;
@@ -904,7 +909,7 @@ footer .social-icons-link {
   padding: 63px 24px;
 
   transform: translateY(101%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   font-size: 18px;
   line-height: 1.56;
